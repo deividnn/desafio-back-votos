@@ -1,0 +1,42 @@
+<config xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+        xmlns:jsr107='http://www.ehcache.org/v3/jsr107'
+        xmlns='http://www.ehcache.org/v3'
+        xsi:schemaLocation="http://www.ehcache.org/v3 https://www.ehcache.org/schema/ehcache-core-3.0.xsd
+                            http://www.ehcache.org/v3/jsr107 https://www.ehcache.org/schema/ehcache-107-ext-3.0.xsd">
+
+    <cache alias="default-query-results-region">
+        <expiry>
+            <tti>60</tti>
+        </expiry>
+        <heap>4096</heap>
+    </cache>
+
+    <cache alias="default-update-timestamps-region">
+        <expiry>
+            <none/>
+        </expiry>
+        <heap>4096</heap>
+    </cache>
+    
+    <cache alias="voto" uses-template="default">
+        <expiry>
+            <tti unit="seconds">60</tti>
+        </expiry>
+        <heap>4096</heap>
+    </cache>
+    
+    <cache alias="pauta" uses-template="default">
+        <expiry>
+            <tti unit="seconds">60</tti>
+        </expiry>
+        <heap>4096</heap>
+    </cache>  
+  
+    <cache-template name="default">
+        <expiry>
+            <tti unit="seconds">60</tti>
+        </expiry>
+        <heap>4096</heap>
+    </cache-template>
+
+</config>
