@@ -43,7 +43,6 @@ public class VotoControllerTest {
     int randomServerPort;
 
     @Test
-    @Order(1)
     void criarVotoTest() throws URISyntaxException {
 
         String baseUrl = "http://localhost:" + randomServerPort + contextPath + "v2/pautas";

@@ -32,6 +32,7 @@ public class VotoController {
     private VotoService votoService;
 
     @PostMapping("v1/votos")
+    @Deprecated
     @ApiOperation(value = "Cria um voto")
     public ResponseEntity<Voto> criarSessao(@RequestBody Voto voto) throws NotFoundException, SessaoException, CPFInvalidoException, VotoException {
         Voto votoCriado = this.votoService.criar(voto);

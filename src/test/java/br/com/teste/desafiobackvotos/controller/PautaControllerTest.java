@@ -6,14 +6,9 @@
 package br.com.teste.desafiobackvotos.controller;
 
 import br.com.teste.desafiobackvotos.model.Pauta;
-import br.com.teste.desafiobackvotos.repository.PautaRepository;
-import br.com.teste.desafiobackvotos.service.PautaService;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.time.Instant;
-import java.util.List;
-import junit.framework.Assert;
-import static org.assertj.core.api.Assertions.assertThat;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
@@ -46,7 +41,6 @@ public class PautaControllerTest {
     int randomServerPort;
 
     @Test
-    @Order(1)
     void criarPautaTest() throws URISyntaxException {
 
         String baseUrl = "http://localhost:" + randomServerPort + contextPath+"v2/pautas";

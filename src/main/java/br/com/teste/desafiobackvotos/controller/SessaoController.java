@@ -30,6 +30,7 @@ public class SessaoController {
     private SessaoService sessaoService;
 
     @PostMapping("v1/sessoes")
+    @Deprecated
     @ApiOperation(value = "Cria uma sessao")
     public ResponseEntity<Sessao> criarSessao(@RequestBody Sessao sessao) throws NotFoundException, SessaoException {
         Sessao sessaoCriada = this.sessaoService.criar(sessao);
@@ -38,6 +39,7 @@ public class SessaoController {
     }
 
     @PostMapping("v2/sessoes")
+    @Deprecated
     @ApiOperation(value = "Cria uma sessao.")
     public ResponseEntity<Sessao> criarSessaov2(@RequestBody Sessao sessao) throws NotFoundException, SessaoException {
         Sessao sessaoCriada = this.sessaoService.criar(sessao);

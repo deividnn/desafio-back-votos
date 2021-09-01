@@ -31,6 +31,7 @@ public class PautaController {
     private PautaService pautaService;
 
     @PostMapping("v1/pautas")
+    @Deprecated
     @ApiOperation(value = "Cria uma pauta")
     public ResponseEntity<Pauta> criarPauta(@RequestBody Pauta pauta) {
         Pauta pautaCriada = this.pautaService.criar(pauta);
@@ -47,6 +48,7 @@ public class PautaController {
     }
 
     @GetMapping(value = "v1/pautas/{codigo}/resultado")
+    @Deprecated
     @ApiOperation(value = "Obtem resultado de uma pauta")
     public ResponseEntity<Pauta> obterResultadoPauta(@PathVariable Long codigo) throws NotFoundException {
         Pauta pauta = this.pautaService.obtertResultado(codigo);
