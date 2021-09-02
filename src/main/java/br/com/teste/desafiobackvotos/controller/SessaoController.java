@@ -39,7 +39,6 @@ public class SessaoController {
     }
 
     @PostMapping("v2/sessoes")
-    @Deprecated
     @ApiOperation(value = "Cria uma sessao.")
     public ResponseEntity<Sessao> criarSessaov2(@RequestBody Sessao sessao) throws NotFoundException, SessaoException {
         Sessao sessaoCriada = this.sessaoService.criar(sessao);
